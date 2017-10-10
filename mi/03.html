@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>商品评价</title>
+</head>
+
+<body>
+<div id="div">
+　　　　<span id="0">☆</span><span id="1">☆</span><span id="2">☆</span><span id="3">☆</span><span id="4">☆</span>
+</div>
+<script>
+var spans=document.getElementsByTagName("span");
+var flag=5;
+var Expand=function(){
+
+};
+ 
+onload=function(){
+　
+　　for(var i=0;i<spans.length;i++){
+　　　　spans[i].onmouseover=function(){
+　　　　　　var id=parseInt(this.id);
+　　　　　　for(var i=0;i<=id;i++){
+　　　　　　　　spans[i].innerHTML="★";
+　　　　　　}
+　　　　　　for(var j=id+1;j<5;j++){
+　　　　　　　　spans[j].innerHTML="☆";
+　　　　　　}
+　　　　};
+　　}
+
+　　for(var i=0;i<spans.length;i++){
+　　　　spans[i].onclick=function(){
+　　　　　　var id=parseInt(this.id);
+　　　　　　flag=id;
+　　　　　　for(var i=0;i<=id;i++){
+　　　　　　　　spans[i].innerHTML="★";
+　　　　　　}
+　　　　　　Expand();
+　　　　};
+　　}
+
+　　document.getElementById("div").onmouseout=function(){
+
+　　　　if(flag>=0 && flag<=4){
+　　　　　　for(var i=0;i<=flag;i++){
+　　　　　　　　spans[i].innerHTML="★";
+　　　　　　}
+　　　　　　for(var j=flag+1;j<5;j++){
+　　　　　　　　spans[j].innerHTML="☆";
+　　　　　}
+　　}
+
+　　　　else{
+　　　　　　for(var i=0;i<spans.length;i++){
+　　　　　　　　spans[i].innerHTML="☆";
+　　　　　　}
+　　　　}
+　　};
+};
+</script>
+  <textarea id="chat" cols="30" rows="5"></textarea>
+  <input type="button" value="发布留言" />
+  <ul>
+    <li>暂无留言</li>
+  </ul>
+<script>
+ 
+  var button=document.getElementsByTagName("input")[0];
+  var ul=document.getElementsByTagName("ul")[0];
+  var i=0;
+  button.onclick=function (){
+	  var text=document.getElementById("chat").value;
+	  var nli=document.createElement("li");
+      var ntex=document.createTextNode(text);
+	  nli.appendChild(ntex);
+	  ul.insertBefore(nli,ul.childNodes[i]);
+	  ul.removeChild(ul.childNodes[i+1]);
+	 
+	  i++;
+	  
+	  
+  
+  
+  }
+</script>
+</body>
+</html>
