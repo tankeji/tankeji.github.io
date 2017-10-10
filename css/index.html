@@ -1,0 +1,61 @@
+﻿<html>
+<head>
+<title>谭科技</title>
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<audio autoplay="autoplay" loop="loop">
+      <source src="bsxhz.mp3" type="audio/mp3" />
+Your browser does not support the audio element.
+</audio>
+</head>
+<body>
+	<div class="header">
+	<h1><span><a href="http://tankeji.net">谭科技</a></span></h1></div>
+		 <!-----start-main---->
+				<div class="login-form">
+					<div class="head-info">
+						<a href="#"><img src="images/tankeji.gif" /></a>
+					</div>
+					</div>
+						<div class="social-icons">
+							<h2>谭科技</h2>
+							<h3>心若在 梦就在</h3>
+<h2><DIV id="CountMsg" class="HotDate"> 
+<span id="t_d">00天</span> 
+<span id="t_h">00时</span> 
+<span id="t_m">00分</span> 
+<span id="t_s">00秒</span> 
+</DIV> 
+<script type="text/javascript"> 
+function getRTime(){ 
+var EndTime= new Date('2020/07/01 00:00:00');
+var NowTime = new Date(); 
+var t =EndTime.getTime() - NowTime.getTime(); 
+/*var d=Math.floor(t/1000/60/60/24); 
+t-=d*(1000*60*60*24); 
+var h=Math.floor(t/1000/60/60); 
+t-=h*60*60*1000; 
+var m=Math.floor(t/1000/60); 
+t-=m*60*1000; 
+var s=Math.floor(t/1000);*/ 
+
+var d=Math.floor(t/1000/60/60/24); 
+var h=Math.floor(t/1000/60/60%24); 
+var m=Math.floor(t/1000/60%60); 
+var s=Math.floor(t/1000%60); 
+
+document.getElementById("t_d").innerHTML = d + "天"; 
+document.getElementById("t_h").innerHTML = h + "时"; 
+document.getElementById("t_m").innerHTML = m + "分"; 
+document.getElementById("t_s").innerHTML = s + "秒"; 
+} 
+setInterval(getRTime,1000); 
+</script> </h2>
+<h3>在接下来的时间里，你愿意与学习结为伴侣，无论贫穷还是富贵，无论电脑还是手机，无论多困或者多累，无论想吃还是想睡，都要把学习放在第一位！</h3>
+<h3>以此为目标，同甘共苦同舟共济永不言弃，爱惜它尊重它保护它，你愿意这样做吗？</h3>
+							<ul class="bottom-buttons">
+			</div>
+   					<div class="copy-right">
+						<p>技术支持 <a href="http://811030025.qzone.qq.com">谭科技</a></p>
+					</div>	
+</body>
+</html>
